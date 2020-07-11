@@ -13,3 +13,5 @@ Controlled drag means that the position is controlled not by the component that 
 The Draggable from react-draggable can be used in a controlled manner by providing position. The onDrag reports the position during the drag operation. But other components can be controlled with the position props so that state and positions are always in sync. Draggable has an internal state with the position but since it has a position prop and also reports the position with onDrag during drag operations it is the same as a controlled component.
 
 To really control the position and do the HTML position logic yourself, use DraggableCore from react-draggable instead.
+
+Works on Desktop as well as Mobile devices.
