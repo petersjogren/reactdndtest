@@ -1,4 +1,4 @@
-# Simple controlle drag test
+# Simple controlled drag test
 
 ## Install
 
