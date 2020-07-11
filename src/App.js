@@ -29,7 +29,7 @@ class App extends React.Component {
           height={this.state.height}
           onDrag={(x, y) => this.setState({ x: x * 2, y: y })}
           onResize={(width, height) =>
-            this.setState({ width: width, heigth: height })
+            this.setState({ width: width, height: height })
           }
         ></Area>
       </>
