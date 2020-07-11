@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Area from "./Area";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { x: 0, y: 0 };
+  }
+
+  render() {
+    return (
+      <>
+        <Area
+          position={this.state}
+          onDrag={(x, y) => this.setState({ x: x, y: y })}
+        ></Area>
+        <br />
+        <Area
+          position={{ x: this.state.x / 2, y: this.state.y }}
+          onDrag={(x, y) => this.setState({ x: x * 2, y: y })}
+        ></Area>
+      </>
+    );
+  }
 }
 
 export default App;
